@@ -22,7 +22,9 @@ public class ControladorPantallaRegistrarProductos{
     public void recibirDatos(){
         Producto producto = new Producto();
         
-        if(campoVacioId_V() && campoVacioNombre() && campoVacioDescripcion() && campoVacioPrecio() && campoNumericoValidoPrecio() && campoVacioCantidad() &&campoVacioRuta()){
+        if(campoVacioId_V() == false && campoVacioNombre() == false && campoVacioDescripcion() == false && campoVacioPrecio() == false && campoNumericoValidoPrecio() == false && campoVacioCantidad() == false &&campoVacioRuta() == false){
+            
+        }else {
             int id_V = Integer.parseInt(pantallaRegistro.txtId_V.getText());
             String nombre = pantallaRegistro.txtNombre.getText();
             String tipo = (String) pantallaRegistro.tipoProducto.getSelectedItem();

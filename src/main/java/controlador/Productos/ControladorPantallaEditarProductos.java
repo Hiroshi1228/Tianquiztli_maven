@@ -47,7 +47,9 @@ public class ControladorPantallaEditarProductos {
     public void recibirDatos(){
         Productos producto = new Productos();
         
-        if( campoVacioNombre() && campoVacioDescripcion() && campoVacioPrecio() && campoNumericoValidoPrecio() ){
+        if( campoVacioNombre() == false && campoVacioDescripcion() == false && campoVacioPrecio() == false && campoNumericoValidoPrecio() == false ){
+            
+        }else {
             int id = Integer.parseInt(pantallaEditar.txtId.getText());
             String nombre = pantallaEditar.txtNombre.getText();
             String tipo = (String) pantallaEditar.tipoProducto.getSelectedItem();
@@ -65,9 +67,9 @@ public class ControladorPantallaEditarProductos {
     public void recibirDatos2(){
         Productos producto = new Productos();
         
-        
-        
-        if( campoVacioNombre() && campoVacioDescripcion() && campoVacioPrecio() && campoNumericoValidoPrecio() ){
+        if( campoVacioNombre() == false && campoVacioDescripcion() == false && campoVacioPrecio() == false && campoNumericoValidoPrecio() == false ){
+      
+        }else {
             int id = Integer.parseInt(pantallaEditar.txtId.getText());
            
             File ruta = new File (pantallaEditar.txtRuta.getText());
