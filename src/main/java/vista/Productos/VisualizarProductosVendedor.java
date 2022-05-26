@@ -92,9 +92,9 @@ public class VisualizarProductosVendedor extends JFrame {
         jPanel3 = new JPanel();
         jScrollPane1 = new JScrollPane();
         tabla = new JTable();
-        tabla.setBackground(new Color(153, 255, 153));
+        tabla.setBackground(new Color(87, 194, 48));
         jPanel4 = new JPanel();
-        jPanel4.setBackground(new Color(153, 255, 153));
+        jPanel4.setBackground(new Color(87, 194, 48));
         id = new JLabel();
         nombre = new JLabel();
         tipo = new JLabel();
@@ -113,7 +113,7 @@ public class VisualizarProductosVendedor extends JFrame {
         jLabel1 = new JLabel();
         tf6_cantidad = new JLabel();
         jPanel2 = new JPanel();
-        jPanel2.setBackground(new Color(153, 255, 153));
+        jPanel2.setBackground(new Color(87, 194, 48));
         b2 = new JButton();
         b3 = new JButton();
         b4 = new JButton();
@@ -132,7 +132,7 @@ public class VisualizarProductosVendedor extends JFrame {
 
         jTabbedPane1.setBackground(new Color(0, 0, 0));
 
-        jPanel1.setBackground(new Color(250, 199, 199));
+        jPanel1.setBackground(new Color(70, 156, 39));
 
         jPanel3.setBackground(new Color(153, 255, 153));
         jPanel3.setBorder(BorderFactory.createEtchedBorder());

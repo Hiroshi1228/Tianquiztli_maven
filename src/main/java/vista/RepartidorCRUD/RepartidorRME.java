@@ -114,7 +114,7 @@ public class RepartidorRME extends JFrame {
     
     public void initComponents() {
         Panel = new JPanel();
-        Panel.setBackground(new Color(255, 204, 204));
+        Panel.setBackground(new Color(70, 156, 39));
         
         imagen = new JLabel();
         imagen.setBounds(250, 8, 560, 105);
@@ -127,7 +127,7 @@ public class RepartidorRME extends JFrame {
         Panel.add(imagen);
         
         TablaR = new JTable();
-        TablaR.setBackground(new Color(153, 255, 153));
+        TablaR.setBackground(new Color(87, 194, 48));
         
         jScrollPane1 = new JScrollPane();
         jScrollPane1.setViewportView(TablaR);
@@ -158,7 +158,7 @@ public class RepartidorRME extends JFrame {
         
         Limpiar = new JButton("Limpiar");
         Limpiar.setFont(new Font("Century Gothic", 0, 14)); 
-        Limpiar.setBackground(new Color(153, 255, 153));
+        Limpiar.setBackground(new Color(87, 194, 48));
         Limpiar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Limpiar();
@@ -167,7 +167,7 @@ public class RepartidorRME extends JFrame {
         
         Registrar = new JButton("Registrar Repartidor");
         Registrar.setFont(new Font("Century Gothic", 0, 14));
-        Registrar.setBackground(new Color(153, 255, 153));
+        Registrar.setBackground(new Color(87, 194, 48));
         Registrar.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent evt) {
                 registro(evt); 
@@ -177,7 +177,7 @@ public class RepartidorRME extends JFrame {
         
         Modificar = new JButton("Modificar Repartidor");
         Modificar.setFont(new Font("Century Gothic", 0, 14)); 
-        Modificar.setBackground(new Color(153, 255, 153));
+        Modificar.setBackground(new Color(87, 194, 48));
         Modificar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 modificar(evt);
@@ -187,7 +187,7 @@ public class RepartidorRME extends JFrame {
         
         Eliminar = new JButton("Eliminar Repartidor");
         Eliminar.setFont(new Font("Century Gothic", 0, 14));
-        Eliminar.setBackground(new Color(153, 255, 153));
+        Eliminar.setBackground(new Color(87, 194, 48));
         Eliminar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 eliminar(evt);

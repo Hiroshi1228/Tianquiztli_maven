@@ -126,7 +126,7 @@ public class AsignarP extends JFrame {
     private void initComponents() {
 
         Panel = new JPanel();
-        Panel.setBackground(new Color(255, 204, 204));
+        Panel.setBackground(new Color(70, 156, 39));
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         
@@ -142,27 +142,27 @@ public class AsignarP extends JFrame {
 
         p = new JLabel("PEDIDO");
         p.setBounds(450, 110, 130, 30);
-        p.setBackground(new Color(255, 204, 204));
+        p.setBackground(new Color(70, 156, 39));
         p.setFont(new Font("Century Gothic", 0, 30));
         p.setOpaque(true);
         Panel.add(p);
         
         r = new JLabel("REPARTIDOR");
         r.setBounds(420, 350, 200, 30);
-        r.setBackground(new Color(255, 204, 204));
+        r.setBackground(new Color(70, 156, 39));
         r.setFont(new Font("Century Gothic", 0, 30));
         r.setOpaque(true);
         Panel.add(r);
 
         jScrollPane1 = new JScrollPane();
         TablaP = new JTable();
-        TablaP.setBackground(new Color(153, 255, 153));
+        TablaP.setBackground(new Color(87, 194, 48));
         TablaP.setFont(new Font("Century Gothic", 0, 14));
         jScrollPane1.setViewportView(TablaP);
         
         jScrollPane2 = new JScrollPane();
         TablaR = new JTable();
-        TablaR.setBackground(new Color(153, 255, 153));
+        TablaR.setBackground(new Color(87, 194, 48));
         TablaR.setFont(new Font("Century Gothic", 0, 14)); 
         jScrollPane2.setViewportView(TablaR);
         
