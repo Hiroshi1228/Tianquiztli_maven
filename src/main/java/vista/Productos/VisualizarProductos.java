@@ -92,6 +92,7 @@ public class VisualizarProductos extends javax.swing.JFrame {
         btnAgregarAlCarrito = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         l_direccionComprador = new javax.swing.JLabel();
+        reload = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -134,7 +135,7 @@ public class VisualizarProductos extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -352,7 +353,7 @@ public class VisualizarProductos extends javax.swing.JFrame {
                 .addComponent(b5)
                 .addGap(18, 18, 18)
                 .addComponent(btnCarrito)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
                 .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -375,6 +376,14 @@ public class VisualizarProductos extends javax.swing.JFrame {
         });
 
         jLabel2.setText("Indica la cantidad");
+
+        reload.setBackground(new java.awt.Color(217, 98, 98));
+        reload.setText("recargar");
+        reload.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reloadActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -406,7 +415,9 @@ public class VisualizarProductos extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(l_direccionComprador, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(129, 129, 129)
+                                .addComponent(reload))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -427,8 +438,9 @@ public class VisualizarProductos extends javax.swing.JFrame {
                             .addComponent(l_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(l_idComprador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(l_direccionComprador, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(l_direccionComprador, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(reload, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -540,6 +552,11 @@ public class VisualizarProductos extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnAgregarAlCarritoActionPerformed
 
+    private void reloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reloadActionPerformed
+        // TODO add your handling code here:
+        tc.visualizar_ProductoCompradorVO(tabla);
+    }//GEN-LAST:event_reloadActionPerformed
+
     public static void main(String args[]) {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -585,6 +602,7 @@ public class VisualizarProductos extends javax.swing.JFrame {
     public javax.swing.JLabel logo;
     private javax.swing.JLabel nombre;
     public javax.swing.JLabel producto;
+    public javax.swing.JButton reload;
     public javax.swing.JSpinner spinnerCantidadProductos;
     public javax.swing.JTextArea ta1;
     public javax.swing.JTable tabla;

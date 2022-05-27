@@ -69,7 +69,8 @@ public class VisualizarProductosVendedor extends JFrame {
         tf5_cantidad.setText("");
         tf6_cantidad.setText("");
         codigo = 0;
-        t.visualizar_ProductoVO(tabla);
+        int idV = Integer.parseInt(l_id.getText());
+        t.visualizar_ProductoVO(tabla,idV);
     }
     
     public void obtenerDatos(){
@@ -592,8 +593,13 @@ public class VisualizarProductosVendedor extends JFrame {
             t.visualizar_ProductoVO(tabla);
             limpiar();
         }*/
-        
  
+ 
+        if (tf1_id.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Seleccione un Producto de la tabla", "Error ", JOptionPane.INFORMATION_MESSAGE);
+            System.out.println("Está vacío");
+        }
+        
         int id = Integer.parseInt(tf1_id.getText());
         String nombre = tf2_nombre.getText();
         String tipo = (String) tf3_tipo.getText();
@@ -601,6 +607,9 @@ public class VisualizarProductosVendedor extends JFrame {
         int precio = Integer.parseInt(tf4_precio.getText());
         String stock = (String) tf5_cantidad.getText();
         int cantidad = Integer.parseInt(tf6_cantidad.getText());
+        
+        
+ 
         
         PantallaEditarProductos pantallaEditar = new PantallaEditarProductos();
         ProductoDAO producto_dao = new ProductoDAO();

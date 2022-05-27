@@ -104,7 +104,7 @@ public class ControladorP_Comprador {
 
         if(list.size() > 0){
             for(int i=0; i<list.size(); i++){
-                Object fila[] = new Object[7];
+                Object fila[] = new Object[8];
                 vo = list.get(i);
                 fila[0] = vo.getIdV();
                 fila[1] = vo.getNombre();
@@ -158,7 +158,7 @@ public class ControladorP_Comprador {
 
         if(list.size() > 0){
             for(int i=0; i<list.size(); i++){
-                Object fila[] = new Object[7];
+                Object fila[] = new Object[8];
                 vo = list.get(i);
                 fila[0] = vo.getIdV();
                 fila[1] = vo.getNombre();
@@ -211,7 +211,7 @@ public class ControladorP_Comprador {
 
         if(list.size() > 0){
             for(int i=0; i<list.size(); i++){
-                Object fila[] = new Object[7];
+                Object fila[] = new Object[8];
                 vo = list.get(i);
                 fila[0] = vo.getIdV();
                 fila[1] = vo.getNombre();
@@ -264,7 +264,7 @@ public class ControladorP_Comprador {
 
         if(list.size() > 0){
             for(int i=0; i<list.size(); i++){
-                Object fila[] = new Object[7];
+                Object fila[] = new Object[8];
                 vo = list.get(i);
                 fila[0] = vo.getIdV();
                 fila[1] = vo.getNombre();

@@ -97,11 +97,10 @@ public class ControladorPantallaEditarProductos {
    
     }
     
-     
-    /* private boolean campoVacioId_V(){
+    private boolean campoVacioPrecio(){
         String errorMessage = "";
-        if(pantallaEditar.txtId_V.getText().trim().isEmpty()){
-            JOptionPane.showMessageDialog(null, "El campo Id_V está vacío, verifica el campo", "Error", JOptionPane.WARNING_MESSAGE);
+        if(pantallaEditar.txtPrecio.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(null, "El campo precio está vacío, verifica el campo", "Error", JOptionPane.WARNING_MESSAGE);
         }
                 
         if(errorMessage.length() == 0){
@@ -110,8 +109,34 @@ public class ControladorPantallaEditarProductos {
             return false;
         }
     }
-     */
-     private boolean campoVacioNombre(){
+    
+    private boolean campoNumericoPrecio(){
+        boolean numero = false;
+        String precio = pantallaEditar.txtPrecio.getText();
+        for(int i = 0;i<precio.length();i++){
+            if(precio.charAt(i) == '1' || precio.charAt(i) == '2'|| precio.charAt(i) == '3' ||
+                    precio.charAt(i) == '4' || precio.charAt(i) == '5' || precio.charAt(i) == '6' ||
+                    precio.charAt(i) == '7' || precio.charAt(i) == '8' || precio.charAt(i) == '9'){
+                numero = true;
+                break;
+            }
+        }
+        return numero;
+    }
+    
+    private boolean campoNumericoValidoPrecio(){
+        String errorMessage = "";
+        if(this.campoNumericoPrecio() == false){
+            JOptionPane.showMessageDialog(null, "El campo precio solo debe tener numeros, verifica el campo", "Error", JOptionPane.WARNING_MESSAGE);
+        }
+                
+        if(errorMessage.length() == 0){
+            return true;
+        }else{
+            return false;
+        }
+    } 
+    private boolean campoVacioNombre(){
         String errorMessage = "";
         if(pantallaEditar.txtNombre.getText().trim().isEmpty()){
             JOptionPane.showMessageDialog(null, "El campo nombre está vacío, verifica el campo", "Error", JOptionPane.WARNING_MESSAGE);
@@ -137,10 +162,11 @@ public class ControladorPantallaEditarProductos {
         }
     }
     
-    private boolean campoVacioPrecio(){
+    
+    private boolean campoVacioCantidad(){
         String errorMessage = "";
         if(pantallaEditar.txtCantidad2.getText().trim().isEmpty()){
-            JOptionPane.showMessageDialog(null, "El campo precio está vacío, verifica el campo", "Error", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "El campo cantidad está vacío, verifica el campo", "Error", JOptionPane.WARNING_MESSAGE);
         }
                 
         if(errorMessage.length() == 0){
@@ -150,33 +176,8 @@ public class ControladorPantallaEditarProductos {
         }
     }
     
-    private boolean campoNumericoPrecio(){
-        boolean numero = false;
-        String precio = pantallaEditar.txtCantidad2.getText();
-        for(int i = 0;i<precio.length();i++){
-            if(precio.charAt(i) == '1' || precio.charAt(i) == '2'|| precio.charAt(i) == '3' ||
-                    precio.charAt(i) == '4' || precio.charAt(i) == '5' || precio.charAt(i) == '6' ||
-                    precio.charAt(i) == '7' || precio.charAt(i) == '8' || precio.charAt(i) == '9'){
-                numero = true;
-                break;
-            }
-        }
-        return numero;
-    }
-    
-    private boolean campoNumericoValidoPrecio(){
-        String errorMessage = "";
-        if(this.campoNumericoPrecio() == false){
-            JOptionPane.showMessageDialog(null, "El campo precio solo debe tener numeros, verifica el campo", "Error", JOptionPane.WARNING_MESSAGE);
-        }
-                
-        if(errorMessage.length() == 0){
-            return true;
-        }else{
-            return false;
-        }
-    } 
-    
+
+     
     
         public void modificar(File foto, int id){
         Productos vo = new Productos();
@@ -194,17 +195,5 @@ public class ControladorPantallaEditarProductos {
         }
         producto_dao.Modificar_ProductoVO(vo);
     }
-    
-    /*private boolean campoVacioRuta(){
-        String errorMessage = "";
-        if(pantallaEditar.txtRuta.getText().trim().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Te ha faltado seleccionar una imagen paa tu producto", "Error", JOptionPane.WARNING_MESSAGE);
-        }
-                
-        if(errorMessage.length() == 0){
-            return true;
-        }else{
-            return false;
-        }
-    }*/
+
 }

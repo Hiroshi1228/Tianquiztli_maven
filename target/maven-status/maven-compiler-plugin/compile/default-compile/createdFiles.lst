@@ -43,6 +43,7 @@ tianquiztli\Tianquiztli$1.class
 vista\RegistrarUsuario\VentanaRegistro$3.class
 modelo\PedidoR\PedidoRDAO.class
 vista\RepartidorCRUD\RepartidorRME$2.class
+vista\Productos\VisualizarProductos$10.class
 controlador\Productos\ControladorP$6.class
 vista\Productos\PantallaRegistrarProductos$1.class
 tianquiztli\VentanaLogin$1.class
@@ -73,6 +74,7 @@ modelo\Productos\Producto.class
 controlador\Productos\ControladorP$1.class
 controlador\AsignarPedido\AsignarPControlador.class
 vista\Productos\PantallaEditarProductos$4.class
+vista\RegistrarUsuario\VentanaRegistro$5.class
 modelo\AsignarPedido\PedidoDAO.class
 vista\Productos\VisualizarProductosVendedor$6.class
 vista\Productos\PantallaRegistrarProductos$2.class
