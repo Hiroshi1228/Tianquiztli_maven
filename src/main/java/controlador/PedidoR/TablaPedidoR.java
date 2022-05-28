@@ -70,9 +70,6 @@ public class TablaPedidoR {
     }
     
     public void cancelar_PedidoVO(String id ){
-        
-        //System.out.print("Paso aqui");
-        System.out.print(id);
       
         int r1 = dao.Cancelar_PedidoVO(id);
         if(r1==1){
@@ -84,9 +81,6 @@ public class TablaPedidoR {
     }
     
     public void aceptar_PedidoVO(String id ){
-        
-        //System.out.print("Paso aqui");
-        System.out.print(id);
       
         int r1 = dao.Aceptar_PedidoVO(id);
         if(r1==1){
@@ -98,9 +92,6 @@ public class TablaPedidoR {
     }
     
     public void entregado_PedidoVO(String id ){
-        
-        //System.out.print("Paso aqui");
-        System.out.print(id);
       
         int r1 = dao.Entregado_PedidoVO(id);
         if(r1==1){

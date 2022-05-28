@@ -239,7 +239,6 @@ public class VentanaLogin extends javax.swing.JFrame {
                         VisualizarPedidoR vpr = new VisualizarPedidoR(idR);
                         
                         vpr.l_repartidor.setText(usuario);
-                        //vpr.l_idRepartidor.setText(String.valueOf(idR));
                         
                         TablaPedidoR tp = new TablaPedidoR(vpr);
                         this.setVisible(false);

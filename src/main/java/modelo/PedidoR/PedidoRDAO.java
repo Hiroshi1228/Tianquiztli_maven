@@ -60,7 +60,6 @@ public class PedidoRDAO {
         int r=0;
         Conexion conec = new Conexion();
         String sql = "UPDATE pedidos SET estado='cancelado' WHERE id_Pe="+idEntero+";";
-        //String sql="update pedidos set id_Pe=?, id_C=?, id_R=?, estado='cancelado', direccion=?, productos=? where id_Pe=?";
         ResultSet rs = null;
         PreparedStatement ps = null;
         try{
@@ -107,7 +106,6 @@ public class PedidoRDAO {
         int r=0;
         Conexion conec = new Conexion();
         String sql = "UPDATE pedidos SET estado='entregado' WHERE id_Pe="+idEntero+";";
-        //String sql="update pedidos set id_Pe=?, id_C=?, id_R=?, estado='cancelado', direccion=?, productos=? where id_Pe=?";
         ResultSet rs = null;
         PreparedStatement ps = null;
         try{

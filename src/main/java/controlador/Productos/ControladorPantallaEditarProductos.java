@@ -59,7 +59,6 @@ public class ControladorPantallaEditarProductos {
             File ruta = new File (pantallaEditar.txtRuta.getText());
             int cantidad = Integer.parseInt(pantallaEditar.txtCantidad2.getText());
         
-            //this.agregarProducto( nombre, tipo, descripcion, precio, stock, ruta);
             this.modificar2(nombre, tipo, descripcion, precio, id, cantidad, stock);
         }
     }
@@ -68,13 +67,9 @@ public class ControladorPantallaEditarProductos {
         Productos producto = new Productos();
         
         if( campoVacioNombre() == false && campoVacioDescripcion() == false && campoVacioPrecio() == false && campoNumericoValidoPrecio() == false ){
-      
         }else {
             int id = Integer.parseInt(pantallaEditar.txtId.getText());
-           
             File ruta = new File (pantallaEditar.txtRuta.getText());
-        
-            //this.agregarProducto( nombre, tipo, descripcion, precio, stock, ruta);
             this.modificar(ruta,id);
         }
     }

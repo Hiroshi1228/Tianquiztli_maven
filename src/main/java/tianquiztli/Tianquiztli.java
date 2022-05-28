@@ -32,22 +32,5 @@ public class Tianquiztli {
             }
         });
     }
-
-        /*VisualizarProductos vp = new VisualizarProductos();
-        vp.setVisible(true);
-        vp.setLocationRelativeTo(null);
-        VentanaLogin log = new VentanaLogin();
-        log.setVisible(true);
-        log.setLocationRelativeTo(null);
-        
-        /*PantallaRegistrarProductos pantallaRegistro = new PantallaRegistrarProductos();
-        Producto_DAO producto_dao = new Producto_DAO();
-        ControladorPantallaRegistrarProductos rpc = new ControladorPantallaRegistrarProductos(producto_dao, pantallaRegistro);
-        //
-        pantallaRegistro.setTitle("Tianquiztli");
-        pantallaRegistro.setLocationRelativeTo(null);
-
-
-        pantallaRegistro.setVisible(true);*/
     
 }

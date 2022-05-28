@@ -128,6 +128,7 @@ public class VisualizarProductosVendedor extends JFrame {
         jLabel2 = new JLabel();
         l_user = new JLabel();
         l_id = new JLabel();
+        l_id.setVisible(false);
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 

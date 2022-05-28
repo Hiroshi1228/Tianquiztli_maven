@@ -30,7 +30,8 @@ public class PantallaEditarProductos extends javax.swing.JFrame {
      * Creates new form PantallaRegistrarProducto
      */
     public PantallaEditarProductos() {
-        initComponents();
+       initComponents();
+       txtId.setVisible(false);
     }
 
     /**

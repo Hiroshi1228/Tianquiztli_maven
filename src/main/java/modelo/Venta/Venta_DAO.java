@@ -5,8 +5,6 @@ import javax.swing.*;
 import modelo.ConexionBD;
 import modelo.Productos.Producto;
 
-    
-
 public class Venta_DAO {
     int r;
     PreparedStatement ps;
@@ -39,9 +37,6 @@ public class Venta_DAO {
         try{
             ps = c.getConnection().prepareStatement(sql);
             rs = ps.executeQuery();
-            //con = c.getConnection();
-            //ps = con.prepareStatement(sql);
-            //rs = ps.executeQuery();
             while (rs.next()){
                 p.setId_P(rs.getInt(1));
                 p.setId_V(rs.getInt(2));
@@ -61,7 +56,6 @@ public class Venta_DAO {
                 rs.close();
             }catch(Exception ex){}
         }
-           //System.out.println(p.getId_P());
         return p;
      
     }

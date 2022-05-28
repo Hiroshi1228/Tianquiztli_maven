@@ -135,7 +135,7 @@ public class VisualizarProductos extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -306,7 +306,7 @@ public class VisualizarProductos extends javax.swing.JFrame {
         });
 
         btnCarrito.setBackground(new java.awt.Color(217, 98, 98));
-        btnCarrito.setText("Carrito");
+        btnCarrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/shopping_cart.png"))); // NOI18N
         btnCarrito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCarritoActionPerformed(evt);
@@ -330,13 +330,12 @@ public class VisualizarProductos extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnCarrito)
-                                .addGap(41, 41, 41))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(b1)
-                                .addContainerGap())))))
+                        .addComponent(b1)
+                        .addContainerGap())))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(btnCarrito, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -353,7 +352,7 @@ public class VisualizarProductos extends javax.swing.JFrame {
                 .addComponent(b5)
                 .addGap(18, 18, 18)
                 .addComponent(btnCarrito)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -535,9 +534,12 @@ public class VisualizarProductos extends javax.swing.JFrame {
 
     private void btnAgregarAlCarritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarAlCarritoActionPerformed
         // TODO add your handling code here:
+        String stockProducto = this.tf5_stock.getText();
         
         if(this.tf2_nombre.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "Ha ocurrido un error, verifica que hayas seleccionado un producto y que este este disponible en stock", "Error", JOptionPane.ERROR_MESSAGE);
+        }else if(stockProducto.equals("Agotado")){
+            JOptionPane.showMessageDialog(null, "El producto no está disponible por el momento", "Error", JOptionPane.ERROR_MESSAGE);
         }else{
             pc.lb_idv.setText(this.tf1_id.getText());
             pc.lb_nombre.setText(this.tf2_nombre.getText());

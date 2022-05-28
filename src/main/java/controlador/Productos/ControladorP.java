@@ -100,11 +100,6 @@ public class ControladorP {
         dao = new ProductoDAO();
         Productos vo = new Productos();
         ArrayList<Productos> list = dao.Listar_ProductoVO(idV);  //Aqui elegimos la tabla
-        
-        //System.out.println("Holiii" +vpv.l_id.getText());
-        /*vpv.l_id.setText(String.valueOf(id_V));
-        int Id_V = Integer.parseInt(vpv.l_id.getText());*/
-        //idV = vo.getIdV();
 
         if(list.size() > 0){
             for(int i=0; i<list.size(); i++){

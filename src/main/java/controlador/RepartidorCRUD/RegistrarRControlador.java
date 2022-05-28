@@ -81,7 +81,6 @@ public class RegistrarRControlador {
     public void EliminarRepartidor(int id_R) { 
         int respuesta = JOptionPane.showConfirmDialog(null, "¿Desea eliminar repartidor?", "Modificar Repartidor", JOptionPane.YES_NO_OPTION);
                if (respuesta == 1){
-                   //Pendiente
                }else{
                     vista.n2 = (int)(Math.random()*10000+1);
                     vista.Text_IDR.setText(vista.n2 + "");
