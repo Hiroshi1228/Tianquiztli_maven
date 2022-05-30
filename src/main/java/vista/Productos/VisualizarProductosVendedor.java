@@ -16,6 +16,7 @@ import vista.AsignarPedido.AsignarP;
 import vista.RepartidorCRUD.RepartidorRME;
 import java.io.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableModel;
 import modelo.Productos.Producto_DAO;
 import tianquiztli.VentanaLogin;
 
@@ -68,7 +69,10 @@ public class VisualizarProductosVendedor extends JFrame {
         txtfoto.setText("");
         tf5_cantidad.setText("");
         tf6_cantidad.setText("");
+        producto.setIcon(icono);
         codigo = 0;
+        
+        
         int idV = Integer.parseInt(l_id.getText());
         t.visualizar_ProductoVO(tabla,idV);
     }
@@ -636,14 +640,23 @@ public class VisualizarProductosVendedor extends JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         //Método Eliminar
+        if (tf1_id.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Seleccione un Producto de la tabla", "Error ", JOptionPane.INFORMATION_MESSAGE);
+            System.out.println("Está vacío");
+        }
+        int idV = Integer.parseInt(l_id.getText());
+        t.visualizar_ProductoVO(tabla,idV); 
+       
         int id = Integer.parseInt(tf1_id.getText());
         int a = JOptionPane.showConfirmDialog(null, "Desea eliminar este producto","Mensaje",JOptionPane.OK_CANCEL_OPTION);
         if(a == 0){
             this.eliminar(id);
             limpiar();
+            
+            Integer.parseInt(l_id.getText());
+            t.visualizar_ProductoVO(tabla,idV); 
         }
-        int idV = Integer.parseInt(l_id.getText());
-        t.visualizar_ProductoVO(tabla,idV); 
+
     }                                        
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
@@ -658,6 +671,14 @@ public class VisualizarProductosVendedor extends JFrame {
         pantallaRegistro.setTitle("Tianquiztli");
         pantallaRegistro.setLocationRelativeTo(null);
         pantallaRegistro.setVisible(true);
+        pantallaRegistro.addWindowListener(new WindowAdapter() {
+        @Override
+        public void windowClosing(WindowEvent e) {
+            //Hacer lo que yo quiero
+            System.out.println("Estoy cerrando");
+            t.visualizar_ProductoVO(tabla,idV);
+            }
+        });
         
     }                                        
 

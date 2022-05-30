@@ -74,6 +74,8 @@ public class ControladorP {
             }
             tabla.setModel(dt);
             tabla.setRowHeight(60);
+            dt.fireTableDataChanged();
+            tabla.repaint();
         }
     }
     public void visualizar_ProductoVO(JTable tabla, int idV){
@@ -128,6 +130,18 @@ public class ControladorP {
             }
             tabla.setModel(dt);
             tabla.setRowHeight(60);
+        }else{
+            tabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "NOMBRE", "TIPO", "DESCRIPCION", "PRECIO", "CANTIDAD"
+            }
+        ));
         }
     }
      
