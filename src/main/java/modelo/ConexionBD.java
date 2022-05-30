@@ -8,30 +8,34 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
 public class ConexionBD {
     
     // Librería de MySQL
     public String driver = "com.mysql.cj.jdbc.Driver";
     // Nombre de la base de datos
-    public String database = "tianquiztli";
+    public String database = "bp2xxkmj72wwpiibl4qt";
     // Host
-    public String hostname = "localhost";
+    public String hostname = "bp2xxkmj72wwpiibl4qt-mysql.services.clever-cloud.com";
     // Puerto
     public String port = "3306";
-    //Rura a nuestra base de datos
-    public String url = "jdbc:mysql://" + hostname + ":" + port + "/" + database + "?useSSL=false";
+    
     // Nombre de usuario
-    public String username = "root";
+    public String username = "uhr6kjqbxuq6vwgs";
 
     // Clave de usuario
-    public String password = "";
+    public String password = "faTAK0FpNuVvEpisAlLw";
+    
+    //Rura a nuestra base de datos
+    public String url = "jdbc:mysql://" + username + ":" + port + "/" + database + "?useSSL=false";
+    
        
     public ConexionBD() {
-        this.hostname = "localhost";
+        this.hostname = "bp2xxkmj72wwpiibl4qt-mysql.services.clever-cloud.com";
         this.port = "3306";
-        this.database = "tianquiztli";
-        this.username = "root";
-        this.password = "";
+        this.database = "bp2xxkmj72wwpiibl4qt";
+        this.username = "uhr6kjqbxuq6vwgs";
+        this.password = "faTAK0FpNuVvEpisAlLw";
 
         this.driver = "com.mysql.cj.jdbc.Driver";
         this.url = "jdbc:mysql://" + hostname + ":" + port + "/" + database + "?useSSL=false";
