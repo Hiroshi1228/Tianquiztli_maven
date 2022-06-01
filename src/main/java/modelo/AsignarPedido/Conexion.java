@@ -6,9 +6,9 @@ import javax.swing.JOptionPane;
 public class Conexion {
 
     private static String db = "tianquiztli";
-    private static String user = "root";
-    private static String pass = "";
-    private static String host = "localhost:3306";
+    private static String user = "uhr6kjqbxuq6vwgs";
+    private static String pass = "faTAK0FpNuVvEpisAlLw";
+    private static String host = "bp2xxkmj72wwpiibl4qt-mysql.services.clever-cloud.com";
     private static String server = "jdbc:mysql://"+host+"/"+db;
     
     public static Connection getConexion(){

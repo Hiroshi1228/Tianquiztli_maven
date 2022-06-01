@@ -8,9 +8,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Conexion {
-    private final String base = "tianquiztli";
-    private final String user = "root";
-    private final String password = "";
+    private final String base = "bp2xxkmj72wwpiibl4qt";
+    private final String user = "uhr6kjqbxuq6vwgs";
+    private final String password = "faTAK0FpNuVvEpisAlLw";
     private final String url = "jdbc:mysql://192.168.64.2:3306/" + base;
     private Connection con = null;
     
