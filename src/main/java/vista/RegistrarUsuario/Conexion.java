@@ -8,10 +8,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Conexion {
-    private final String base = "bp2xxkmj72wwpiibl4qt";
-    private final String user = "uhr6kjqbxuq6vwgs";
-    private final String password = "faTAK0FpNuVvEpisAlLw";
-    private final String url = "jdbc:mysql://192.168.64.2:3306/" + base;
+    private final String base = "bqcxcfusmjifn4l4vomm";
+    private final String user = "ufos6b4mrp3fqkxn";
+    private final String password = "1DPl9QHCZiz4LTG8VcJm";
+    private final String url = "mysql://ufos6b4mrp3fqkxn:1DPl9QHCZiz4LTG8VcJm@bqcxcfusmjifn4l4vomm-mysql.services.clever-cloud.com:3306/bqcxcfusmjifn4l4vomm";
     private Connection con = null;
     
     public Connection getConnection(){

@@ -7,10 +7,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Conexion {
-    private final String base = "tianquiztli";
-    private final String user = "root";
-    private final String password = "";
-    private final String url = "jdbc:mysql://localhost:3306/" + base;
+    private final String base = "bqcxcfusmjifn4l4vomm";
+    private final String user = "ufos6b4mrp3fqkxn";
+    private final String password = "1DPl9QHCZiz4LTG8VcJm";
+    private final String url = "jdbc:mysql://ufos6b4mrp3fqkxn:1DPl9QHCZiz4LTG8VcJm@bqcxcfusmjifn4l4vomm-mysql.services.clever-cloud.com:3306/bqcxcfusmjifn4l4vomm";
     private Connection con = null;
     
     public Connection getConnection(){
